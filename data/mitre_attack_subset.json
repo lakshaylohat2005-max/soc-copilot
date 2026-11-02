@@ -1,0 +1,65 @@
+{
+  "version": "14.1",
+  "tactics": [
+    {
+      "id": "TA0001",
+      "name": "Initial Access",
+      "techniques": [
+        {
+          "id": "T1190",
+          "name": "Exploit Public-Facing Application",
+          "description": "Adversaries may attempt to exploit vulnerabilities in Internet-facing software to gain initial access."
+        },
+        {
+          "id": "T1566",
+          "name": "Phishing",
+          "description": "Adversaries may send spearphishing emails with malicious links or attachments."
+        }
+      ]
+    },
+    {
+      "id": "TA0006",
+      "name": "Credential Access",
+      "techniques": [
+        {
+          "id": "T1110.001",
+          "name": "Brute Force: Password Guessing",
+          "description": "Adversaries may systematically guess passwords to obtain valid credentials."
+        },
+        {
+          "id": "T1003",
+          "name": "OS Credential Dumping",
+          "description": "Adversaries may attempt to dump credentials from memory or filesystem."
+        }
+      ]
+    },
+    {
+      "id": "TA0004",
+      "name": "Privilege Escalation",
+      "techniques": [
+        {
+          "id": "T1548.003",
+          "name": "Sudo and Sudo Caching",
+          "description": "Adversaries may abuse sudo permissions to elevate privileges to root."
+        },
+        {
+          "id": "T1078",
+          "name": "Valid Accounts",
+          "description": "Adversaries may obtain and abuse credentials of existing accounts."
+        }
+      ]
+    },
+    {
+      "id": "TA0011",
+      "name": "Command and Control",
+      "techniques": [
+        {
+          "id": "T1071",
+          "name": "Application Layer Protocol",
+          "description": "Adversaries may communicate using standard application layer protocols (HTTP, HTTPS, DNS) to avoid detection."
+        }
+      ]
+    }
+  ]
+}
+

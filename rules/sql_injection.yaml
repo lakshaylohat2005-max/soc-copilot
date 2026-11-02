@@ -1,0 +1,17 @@
+id: RULE-WEB-001
+name: SQL Injection Probe & Exploitation
+description: Incoming HTTP request contains known SQL injection signatures targeting public-facing web applications.
+severity: CRITICAL
+mitre:
+  tactic: Initial Access
+  technique_id: T1190
+  technique_name: "Exploit Public-Facing Application"
+criteria:
+  source: nginx
+  event_type: http_request
+  regex_match: "(union\\s+select|'\\s+or\\s+'1'='1|--|/\\*)"
+  group_by: source_ip
+action_recommendations:
+  - action_type: block_ip
+    description: Block attacking IP at WAF or reverse proxy level
+

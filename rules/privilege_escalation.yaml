@@ -1,0 +1,17 @@
+id: RULE-PRIV-001
+name: Unauthorized Sudo & Privilege Escalation
+description: Non-root user attempted unauthorized execution of administrative binaries via sudo.
+severity: HIGH
+mitre:
+  tactic: Privilege Escalation
+  technique_id: T1548.003
+  technique_name: "Abuse Elevation Control Mechanism: Sudo and Sudo Caching"
+criteria:
+  source: auth
+  event_type: sudo_failure
+  threshold: 1
+  group_by: username
+action_recommendations:
+  - action_type: disable_user
+    description: Suspend user credentials pending security interview
+
